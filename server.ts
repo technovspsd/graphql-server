@@ -44,7 +44,7 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    currentUser: (_, __, { user }) => {
+    currentUser: (_:any, __: any, { user }:any) => {
       if (!user) throw new Error('Not authenticated');
       return user;
     },
