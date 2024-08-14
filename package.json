@@ -1,10 +1,11 @@
 {
   "name": "graphql-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -12,18 +13,19 @@
   "description": "",
   "dependencies": {
     "apollo-server": "^3.13.0",
-    "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
     "graphql": "^16.9.0",
     "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
-    "@types/bcrypt": "^5.0.2",
     "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^22.2.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
